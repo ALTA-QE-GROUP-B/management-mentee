@@ -1,0 +1,142 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#//MbaAisyah \u0026 viski"
+      }
+    ],
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7326474542,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "\" Show List CLASS with Valid Data \"",
+        "description": "",
+        "id": "user-could-create-class,-edit-class,-delete-class,-and-see-listed-class;\"-show-list-class-with-valid-data-\"",
+        "after": [
+          {
+            "result": {
+              "duration": 110406000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2247674500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User open the website management mentee",
+            "match": {
+              "location": "LoginSteps.userOpenTheWebsiteManagementMentee()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1648689875,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User input \"arshidiq500@gmail.com\" as userName and input \"password\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arshidiq500@gmail.com",
+                  "offset": 12
+                },
+                {
+                  "val": "password",
+                  "offset": 58
+                }
+              ],
+              "location": "LoginSteps.userInputAsUserNameAndInputAsPassword(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5554824750,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User Click button Login",
+            "match": {
+              "location": "LoginSteps.userClickButtonLogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5070921000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User Click OK in pop up success login",
+            "match": {
+              "location": "LoginSteps.userClickOKInPopUpSuccessLogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2933744791,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User click menu Class",
+            "match": {
+              "location": "ClassSteps.userClickMenuClass()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3042768833,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "LIST CLASS",
+            "match": {
+              "location": "ClassSteps.validationHeader()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@ListClass"
+          },
+          {
+            "line": 3,
+            "name": "@Positive"
+          }
+        ]
+      }
+    ],
+    "name": "User could create class, edit class, delete class, and see listed class",
+    "description": "",
+    "id": "user-could-create-class,-edit-class,-delete-class,-and-see-listed-class",
+    "keyword": "Feature",
+    "uri": "features/Class.feature"
+  }
+]
