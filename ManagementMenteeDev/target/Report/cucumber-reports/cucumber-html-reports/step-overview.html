@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>Project Name</td>
+                          <td>1</td>
+                        <td>20 Mar 2023, 07:51</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">Hooks.closeBrowser()</td>
+                <td>16</td>
+                <td class="duration" data-value="17912102674">17s 912ms</td>
+                <td class="duration" data-value="1119506417">1s 119ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Hooks.openBrowser()</td>
+                <td>16</td>
+                <td class="duration" data-value="75161755574">1m 15s 161ms</td>
+                <td class="duration" data-value="4697609723">4s 697ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ListClassAndUserSteps.listDASHBOARD()</td>
+                <td>1</td>
+                <td class="duration" data-value="3048573427">3s 048ms</td>
+                <td class="duration" data-value="3048573427">3s 048ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ListClassAndUserSteps.listUSER()</td>
+                <td>1</td>
+                <td class="duration" data-value="2054008424">2s 054ms</td>
+                <td class="duration" data-value="2054008424">2s 054ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ListClassAndUserSteps.userClickMenuClass()</td>
+                <td>2</td>
+                <td class="duration" data-value="4381291342">4s 381ms</td>
+                <td class="duration" data-value="2190645671">2s 190ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ListClassAndUserSteps.userClickMenuUser()</td>
+                <td>2</td>
+                <td class="duration" data-value="6320700712">6s 320ms</td>
+                <td class="duration" data-value="3160350356">3s 160ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ListClassAndUserSteps.validationHeader()</td>
+                <td>1</td>
+                <td class="duration" data-value="3049137910">3s 049ms</td>
+                <td class="duration" data-value="3049137910">3s 049ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ListClassAndUserSteps.validationHeaderDelete()</td>
+                <td>1</td>
+                <td class="duration" data-value="2048338511">2s 048ms</td>
+                <td class="duration" data-value="2048338511">2s 048ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SuperAdminSteps.inputCredential(String,String)</td>
+                <td>16</td>
+                <td class="duration" data-value="87744950876">1m 27s 744ms</td>
+                <td class="duration" data-value="5484059429">5s 484ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SuperAdminSteps.superAdminClickButtonOK()</td>
+                <td>3</td>
+                <td class="duration" data-value="30405599437">30s 405ms</td>
+                <td class="duration" data-value="10135199812">10s 135ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SuperAdminSteps.superAdminClickTextInPageUserForCreateNewListUser()</td>
+                <td>3</td>
+                <td class="duration" data-value="9418424594">9s 418ms</td>
+                <td class="duration" data-value="3139474864">3s 139ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SuperAdminSteps.superAdminClickTheLogoutButton()</td>
+                <td>5</td>
+                <td class="duration" data-value="25482194570">25s 482ms</td>
+                <td class="duration" data-value="5096438914">5s 096ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SuperAdminSteps.superAdminClickTheUserPage()</td>
+                <td>5</td>
+                <td class="duration" data-value="15857774946">15s 857ms</td>
+                <td class="duration" data-value="3171554989">3s 171ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SuperAdminSteps.superAdminToDeleteDataByClickingOnTheActionButtonWithAPencilIcon()</td>
+                <td>1</td>
+                <td class="duration" data-value="2077361461">2s 077ms</td>
+                <td class="duration" data-value="2077361461">2s 077ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SuperAdminSteps.superAdminToUpdateDataByClickingOnTheActionButtonWithAPencilIcon()</td>
+                <td>1</td>
+                <td class="duration" data-value="2074488302">2s 074ms</td>
+                <td class="duration" data-value="2074488302">2s 074ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SuperAdminSteps.userAlreadySignInAsSuperAdminAtManagementMenteWebsite()</td>
+                <td>5</td>
+                <td class="duration" data-value="313038577">313ms</td>
+                <td class="duration" data-value="62607715">062ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SuperAdminSteps.userClickButtonOK()</td>
+                <td>15</td>
+                <td class="duration" data-value="91819881641">1m 31s 819ms</td>
+                <td class="duration" data-value="6121325442">6s 121ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SuperAdminSteps.userClickStatusAndAndAddressAndClickSubmit(String,String,String)</td>
+                <td>3</td>
+                <td class="duration" data-value="25520338187">25s 520ms</td>
+                <td class="duration" data-value="8506779395">8s 506ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SuperAdminSteps.userInputNameAndEmailAndPhoneNumber(String,String,String)</td>
+                <td>3</td>
+                <td class="duration" data-value="10785663743">10s 785ms</td>
+                <td class="duration" data-value="3595221247">3s 595ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SuperAdminSteps.verifyLogin()</td>
+                <td>5</td>
+                <td class="duration" data-value="360015487">360ms</td>
+                <td class="duration" data-value="72003097">072ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserAliaSteps.userAlreadySignInAsUserAdminAtManagementMenteWebsite()</td>
+                <td>10</td>
+                <td class="duration" data-value="559113569">559ms</td>
+                <td class="duration" data-value="55911356">055ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserAliaSteps.userClickClassMenu()</td>
+                <td>5</td>
+                <td class="duration" data-value="25841156356">25s 841ms</td>
+                <td class="duration" data-value="5168231271">5s 168ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserAliaSteps.userClickPencilIcon()</td>
+                <td>1</td>
+                <td class="duration" data-value="5137394452">5s 137ms</td>
+                <td class="duration" data-value="5137394452">5s 137ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserAliaSteps.userClickSubmit()</td>
+                <td>1</td>
+                <td class="duration" data-value="10083522872">10s 083ms</td>
+                <td class="duration" data-value="10083522872">10s 083ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserAliaSteps.userInputAsUserNameAndInputAsPassword(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="5171302740">5s 171ms</td>
+                <td class="duration" data-value="5171302740">5s 171ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserAliaSteps.userOpenTheWebsiteManagementMentee()</td>
+                <td>11</td>
+                <td class="duration" data-value="12038344320">12s 038ms</td>
+                <td class="duration" data-value="1094394938">1s 094ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserAliaSteps.verifyErrorText(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="10045186532">10s 045ms</td>
+                <td class="duration" data-value="10045186532">10s 045ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserIcaSteps.clickOke()</td>
+                <td>2</td>
+                <td class="duration" data-value="4147324781">4s 147ms</td>
+                <td class="duration" data-value="2073662390">2s 073ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserIcaSteps.inputNameDateStartDateGraduateAndMentor(String,String,String)</td>
+                <td>2</td>
+                <td class="duration" data-value="4751750323">4s 751ms</td>
+                <td class="duration" data-value="2375875161">2s 375ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserIcaSteps.mentor(String)</td>
+                <td>2</td>
+                <td class="duration" data-value="10485707475">10s 485ms</td>
+                <td class="duration" data-value="5242853737">5s 242ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserIcaSteps.mentorUpdate(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="5221213820">5s 221ms</td>
+                <td class="duration" data-value="5221213820">5s 221ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserIcaSteps.shouldAppearAddNewClassSuccess(String)</td>
+                <td>2</td>
+                <td class="duration" data-value="6089602747">6s 089ms</td>
+                <td class="duration" data-value="3044801373">3s 044ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserIcaSteps.updateByInputNameStartDateAndGraduationDate(String,String,String)</td>
+                <td>1</td>
+                <td class="duration" data-value="7375760555">7s 375ms</td>
+                <td class="duration" data-value="7375760555">7s 375ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserIcaSteps.userAddNewClass()</td>
+                <td>2</td>
+                <td class="duration" data-value="4482093079">4s 482ms</td>
+                <td class="duration" data-value="2241046539">2s 241ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserIcaSteps.userDeletingDataContainingTheNameAa()</td>
+                <td>1</td>
+                <td class="duration" data-value="5136211890">5s 136ms</td>
+                <td class="duration" data-value="5136211890">5s 136ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">UserIcaSteps.userUpdateClass()</td>
+                <td>1</td>
+                <td class="duration" data-value="2137373925">2s 137ms</td>
+                <td class="duration" data-value="2137373925">2s 137ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>36</td>
+              <td>149</td>
+              <td class="duration">8m 54s 538ms</td>
+              <td class="duration">3s 587ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
