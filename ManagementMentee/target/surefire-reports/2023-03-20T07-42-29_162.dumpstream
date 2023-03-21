@@ -1,0 +1,4 @@
+# Created at 2023-03-20T07:42:29.764
+Boot Manifest-JAR contains absolute paths in classpath 'A:\00BootcampAlterraAcademy\contohgroupproject2\New folder\ManagementMentee\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
